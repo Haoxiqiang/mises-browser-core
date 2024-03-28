@@ -142,6 +142,15 @@ android_aar_prebuilt("google_firebase_firebase_crashlytics_java") {
   ]
 }
 
+android_aar_prebuilt("google_firebase_firebase_crashlytics_ndk_java") {
+  aar_path = "libs/com_google_firebase_firebase_crashlytics_ndk/firebase-crashlytics-ndk-17.4.1.aar"
+  info_path = "libs/com_google_firebase_firebase_crashlytics_ndk/com_google_firebase_firebase_crashlytics_ndk.info"
+  extract_native_libraries = true
+  proguard_configs = [ "libs/com_google_firebase_firebase_crashlytics_ndk/proguard.txt" ]
+  deps = [
+    ":google_firebase_firebase_crashlytics_java",
+  ]
+}
 
 android_aar_prebuilt("google_play_services_ads_identifier_java") {
   aar_path = "libs/com_google_android_gms_play_services_ads_identifier/play-services-ads-identifier-18.0.0.aar"
